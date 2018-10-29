@@ -39,7 +39,7 @@ public final class DemoApp {
 
     /**
      * Main-Methode.
-     * @param args Startargumente.
+     * @param args Startargume
      */
     public static void main(final String[] args) {
         final Point point = new Point(COR_X, COR_Y);
