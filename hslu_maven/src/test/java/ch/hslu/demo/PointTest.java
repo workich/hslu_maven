@@ -22,6 +22,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+import ch.hslu.oop.demo.Point;
 import nl.jqno.equalsverifier.EqualsVerifier;
 
 /**
@@ -47,7 +48,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#getQuadrant()}.
+     * Test {@link ch.hslu.oop.demo.Point#getQuadrant()}.
      */
     @Test
     public final void testGetQuadrant1() {
@@ -55,7 +56,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#getQuadrant()}.
+     * Test {@link ch.hslu.oop.demo.Point#getQuadrant()}.
      */
     @Test
     public final void testGetQuadrant2() {
@@ -63,7 +64,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#getQuadrant()}.
+     * Test {@link ch.hslu.oop.demo.Point#getQuadrant()}.
      */
     @Test
     public final void testGetQuadrant3() {
@@ -71,7 +72,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#getQuadrant()}.
+     * Test {@link ch.hslu.oop.demo.Point#getQuadrant()}.
      */
     @Test
     public final void testGetQuadrant4() {
@@ -79,7 +80,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#getQuadrant()}.
+     * Test {@link ch.hslu.oop.demo.Point#getQuadrant()}.
      */
     @Test
     public final void testGetQuadrantXAchse() {
@@ -87,7 +88,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#getQuadrant()}.
+     * Test {@link ch.hslu.oop.demo.Point#getQuadrant()}.
      */
     @Test
     public final void testGetQuadrantYAchse() {
@@ -95,7 +96,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#getQuadrant()}.
+     * Test {@link ch.hslu.oop.demo.Point#getQuadrant()}.
      */
     @Test
     public final void testGetQuadrantNullpunkt() {
@@ -103,7 +104,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#toString()}.
+     * Test {@link ch.hslu.oop.demo.Point#toString()}.
      */
     @Test
     public void testToString() {
@@ -111,7 +112,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#equals(java.lang.Object)} Contract.
+     * Test {@link ch.hslu.oop.demo.Point#equals(java.lang.Object)} Contract.
      */
     @Test
     public void testEqualsContract() {
@@ -119,7 +120,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#equals(java.lang.Object)}.
+     * Test {@link ch.hslu.oop.demo.Point#equals(java.lang.Object)}.
      */
     @Test
     public void testEqualsSame() {
@@ -129,7 +130,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#equals(java.lang.Object)}.
+     * Test {@link ch.hslu.oop.demo.Point#equals(java.lang.Object)}.
      */
     @Test
     public void testEqualsEqual() {
@@ -139,7 +140,7 @@ public class PointTest {
     }
 
     /**
-     * Test {@link ch.hslu.demo.Point#equals(java.lang.Object)}.
+     * Test {@link ch.hslu.oop.demo.Point#equals(java.lang.Object)}.
      */
     @Test
     public void testEqualsNotEqual() {

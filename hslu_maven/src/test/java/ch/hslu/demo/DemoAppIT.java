@@ -18,6 +18,8 @@ package ch.hslu.demo;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
+import ch.hslu.oop.demo.DemoApp;
+
 /**
  * Beispiel für Integrationstests.
  * Namenskonvention 'IT' am Schluss. Werden mit dem Goal
