@@ -1,0 +1,120 @@
+package ch.hslu.oop.sw08;
+
+import java.util.Objects;
+
+/**
+ * Write a description of class Temperature here.
+ *
+ * @author Remo Giger
+ * @version 1.0.0.6
+ */
+public class Temperature implements Comparable<Temperature> {
+    public static void main(String[] args) {
+    }
+
+    private static final float KELVIN_OFFSET = 273.15f;
+
+    private float temperaturKelvin;
+
+    public Temperature() {
+
+        this.temperaturKelvin = 0.0f;
+    }
+
+    public Temperature(Temperature tmp) {
+        this(tmp.temperaturKelvin);
+    }
+
+    public Temperature(float tempK) {
+
+        this.temperaturKelvin = tempK;
+    }
+
+    public void setTemperaturCelsius(float temperaturCelsius) {
+        this.temperaturKelvin = convertTemperaturCelsiusToKelvin(temperaturCelsius);
+    }
+
+    public void setTemperaturKelvin(float temperaturKelvin) {
+        this.temperaturKelvin = temperaturKelvin;
+    }
+
+    public void setTemperaturFahrenheit(float temperaturFahrenheit) {
+        this.temperaturKelvin = convertTemperaturFahrenheitToKelvin(temperaturFahrenheit);
+    }
+
+    public float getTemperaturCelsius() {
+        return convertTemperaturKelvinToCelsius(this.temperaturKelvin);
+    }
+
+    public float getTemperaturKelvin() {
+        return this.temperaturKelvin;
+    }
+
+    public float getTemperaturFahrenheit() {
+        return convertTemperaturKelvinToFahrenheit(this.temperaturKelvin);
+    }
+
+    public static float convertTemperaturKelvinToCelsius(float temperaturKelvin) {
+        float temperaturCelsius;
+        temperaturCelsius = temperaturKelvin - KELVIN_OFFSET;
+        return temperaturCelsius;
+    }
+
+    public static float convertTemperaturKelvinToFahrenheit(float temperaturKelvin) {
+        float temperaturFahrenheit;
+        temperaturFahrenheit = (temperaturKelvin * 1.8f) - 459.67f;
+        return temperaturFahrenheit;
+    }
+
+    public static float convertTemperaturFahrenheitToKelvin(float temperaturFahrenheit) {
+        float temperaturKelvin = (temperaturFahrenheit + 459.67f) * (5 / 9f);
+        return temperaturKelvin;
+    }
+
+    public static float convertTemperaturCelsiusToKelvin(float temperaturCelsius) {
+        float temperaturKelvin = temperaturCelsius + KELVIN_OFFSET;
+        return temperaturKelvin;
+    }
+
+    public void addKelvin(float tmpKelvin) {
+        if (this.temperaturKelvin + tmpKelvin >= 0.0f || this.temperaturKelvin + tmpKelvin <= 500.0f) {
+            this.temperaturKelvin += tmpKelvin;
+        }
+    }
+
+    public void addFahrenheit(float tmpFahrenheit) {
+        float tmpF = getTemperaturFahrenheit();
+        tmpF += tmpFahrenheit;
+        float tmpK = (tmpFahrenheit + 459.67f) * 1.8f;
+        this.temperaturKelvin = tmpK;
+    }
+
+    public void addCelsius(float tmpCelsius) {
+        float tmpC = this.getTemperaturCelsius();
+        tmpC += tmpCelsius;
+        float tmpK = tmpC + 273.15f;
+        this.temperaturKelvin = tmpK;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.temperaturKelvin);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Temperature)) {
+            return false;
+        }
+        final Temperature other = (Temperature) obj;
+        return (Float.compare(other.temperaturKelvin, this.temperaturKelvin) == 0);
+    }
+
+    @Override
+    public int compareTo(Temperature other) {
+        return Float.compare(this.temperaturKelvin, other.temperaturKelvin);
+    }
+}
